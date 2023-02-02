@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hi(){
+            alert('hello~')
+        }
+        function bye(){
+            alert('bye~')
+        }
+        function check(){
+            id='root'
+            pw='1234'
+            id2=document.getElementById('id2').value    //"root"
+            pw2=document.getElementById('pw2').value    //"1234"
+            
+            result=document.getElementById('result')    //div
+            if(id2==id && pw2==pw){
+                //alert("login success!!")
+                result.innerHTML="<font color=red> login success!</font> <img src='ok.png' width=100 height=100></img>"
+            }
+            else{
+                // alert("login fail")
+                result.innerHTML='<font color=red> login fail!</font>'
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="hi()">hello</button>
+    <button onclick="bye()">finish</button>
+    <hr color="red">
+
+    ID : <input type="text" id="id2"><br>
+    Password : <input type="text" id="pw2"><br>
+    <button onclick="check()">log in</button>
+    <div id="result">
+        결과 들어갈 곳.
+    </div>
+</body>
+</html>
